@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Borrow extends Model
 {
+    protected $guarded = [];
+
     public function borrower() {
         return $this->belongsTo(User::class, 'borrower_id');
     }
